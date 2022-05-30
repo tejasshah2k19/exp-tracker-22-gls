@@ -1,0 +1,25 @@
+REST API 
+
+1 json 
+2 read GET 
+3 insert POST 
+4 modify PUT
+5 destroy DELETE 
+
+node -->server 
+
+client 
+amazon app--> lec tv 
+amazon.in led tv 
+request
+
+server 
+response 
+
+
+how to install nodemon 
+
+terminal cmd 
+npm install nodemon -g 
+
+
