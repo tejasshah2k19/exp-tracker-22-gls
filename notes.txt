@@ -22,4 +22,14 @@ how to install nodemon
 terminal cmd 
 npm install nodemon -g 
 
+------------------------
+
+express --- http
+node - middleware 
+not server 
+
+npm install express 
+
+rest api -- rest tool -- rest client 
+postman 
 

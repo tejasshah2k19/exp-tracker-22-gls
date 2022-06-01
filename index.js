@@ -1,30 +1,28 @@
-const http = require("http")
+const express =  require("express")
+const session = require("./session")
+const calc = require("./calc")
 
-http.createServer(function(req,res){
+const app = express()
+
+
+// app.get('/', function (req, res) {
+//     res.send('Hello World')
+// })
   
-    let url = req.url
+// app.get('/login', function (req, res) {
+//     res.send('Login')
+// })
 
-    if(url == "/signup"){
-        res.write("Signup");
-        res.end()
-    }else if(url == "/login"){
-        res.write("Login")
-        res.end()
-    }else{
-        res.write("404");
-        res.end()
-    }
+app.get("/login",session.login)
+app.get("/forgetpassword",session.forgetPassword)
 
-
-}).listen(9999);
+app.post("/add",calc.add)
+app.post("/sub",calc.sub)
 
 
 
+app.listen(9999,function(){
+    console.log("server started...on 9999");
+})
 
- //9000
 
-//port 
-//royal --> 
-
-//login 
-//signup
