@@ -4,6 +4,10 @@ const calc = require("./calc")
 
 const app = express()
 
+app.use(express.json())//body
+app.use(express.urlencoded({extended:true}))//body
+//image pdf audio video ---> file 
+
 
 // app.get('/', function (req, res) {
 //     res.send('Hello World')
