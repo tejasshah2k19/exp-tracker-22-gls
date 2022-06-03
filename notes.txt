@@ -33,3 +33,89 @@ npm install express
 rest api -- rest tool -- rest client 
 postman 
 
+-----------------
+https://www.google.com/search?q=royal+technosoft+p+ltd&sxsrf=ALiCzsbB5s6SvmO_ZrB91glBa8xMX-7xLA%3A1654267842446&source=hp&ei=wh-aYuaTGZeT-AaKpLWQBQ&iflsig=AJiK0e8AAAAAYpot0oUYwk1of3cpcd9EKoOFqP-D9bwQ&oq=royal+&gs_lcp=Cgdnd3Mtd2l6EAMYADIECCMQJzIECCMQJzIECCMQJzIICAAQgAQQsQMyCAgAEIAEELEDMgsIABCABBCxAxDJAzIFCAAQkgMyCAgAEIAEELEDMgsIABCABBCxAxCDATIFCC4QgAQ6BwgjEOoCECc6BwgjECcQnQI6CAguELEDEIMBOggILhCABBCxA1DKBljXD2DHQWgBcAB4AYAB4gOIAZgKkgEJMC4zLjIuMC4xmAEAoAEBsAEK&sclient=gws-wiz
+
+
+
+middle -- express 
+
+npm install express --save 
+
+
+const express = require("express") 
+
+const app = express();
+
+app.get("/books")
+
+app.get("/exp",)
+
+app.post("/exp")
+
+app.post("/add",xxxx); 
+
+
+app.listen(5000);
+
+
+//js 
+function -
+--------------------------------
+
+
+calc.js 
+    add
+    sub
+    sqr(3) => 9 
+
+session.js 
+    signup() 
+        fn ln email password gender 
+    login()
+
+development --> 
+controller 
+
+
+fb.com /signup 
+    fn ln email password [ submit ]
+
+server ---> 
+    fetch -> req  
+    email = req.body.email 
+
+    validate 
+
+    db -> exists save into db 
+        true | false 
+
+    true -> login
+    false -> error 
+
+
+
+    MVC   
+        model -- data -- db 
+        view  -- input / output  
+        controller -- logic 
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

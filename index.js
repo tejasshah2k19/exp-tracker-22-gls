@@ -1,6 +1,6 @@
 const express =  require("express")
-const session = require("./session")
-const calc = require("./calc")
+const session = require("./controller/session")
+const calc = require("./controller/calc")
 
 const app = express()
 
