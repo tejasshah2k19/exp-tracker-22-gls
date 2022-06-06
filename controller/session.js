@@ -1,3 +1,12 @@
+
+function signup(req,resp){
+
+    resp.json(req.body);
+    // resp.json({
+    //     "firstName":req.body.firstName
+    // })
+}
+
 //login 
 
 function login(req,res){
@@ -11,3 +20,4 @@ function forgetPassword(req,res){
 
 module.exports.login = login 
 module.exports.forgetPassword  = forgetPassword
+module.exports.signup = signup 

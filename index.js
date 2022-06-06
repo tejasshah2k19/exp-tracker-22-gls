@@ -1,6 +1,7 @@
 const express =  require("express")
 const session = require("./controller/session")
 const calc = require("./controller/calc")
+const logic = require("./controller/logic")
 
 const app = express()
 
@@ -23,7 +24,7 @@ app.get("/forgetpassword",session.forgetPassword)
 app.post("/add",calc.add)
 app.post("/sub",calc.sub)
 
-
+app.post("/prime",logic.prime)
 
 app.listen(9999,function(){
     console.log("server started...on 9999");

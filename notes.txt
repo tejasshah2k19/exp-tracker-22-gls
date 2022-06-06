@@ -101,6 +101,56 @@ server --->
         controller -- logic 
         
 
+-----------------------------
+create one module logic 
+inside logic create 1 api  prime
+
+prime api take 1 input [number] 
+api will response:-
+	if number > 0 
+		return number is prime or not
+		return true if number is prime 
+		return false if num is not prime 
+	if number <= 0 
+		return NAN 
+
+	
+13 
+{
+	prime:true 
+}
+16
+prime:false 
+
+-1
+prime:NAN 
++--------------------------- 
+
+create one more api inside logic module 
+	api : magicNumber()
+	api will take 1 number as input. 
+	if number is odd then find cube of it and return cube of number 
+	if number is even then find square of it and return square of number 
+	if numer is negetive then return -1 
+e.g 
+	num=5
+	{
+		5:125
+	}
+	num=4
+	{
+		4:16 
+	}
+	num=-3
+	{
+		-3:-1 
+	}
+	
+
+
+
+
+
 
 
 
