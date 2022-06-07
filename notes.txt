@@ -147,7 +147,17 @@ e.g
 	}
 	
 
+--------------------------- 
+create api findMax in logic module. 
+User will pass 5 numbers n1 n2 n3 n4 n5 as input parameter 
+you api response shoudl : max number 
+e.g
+n1=1 n2=22 n3=44 n4=5 n5=9
+{
 
+	"max":44
+}
+--------------------------- 
 
 
 
