@@ -3,6 +3,7 @@ const session = require("./controller/session")
 const calc = require("./controller/calc")
 const logic = require("./controller/logic")
 
+
 const app = express()
 
 app.use(express.json())//body
@@ -20,11 +21,14 @@ app.use(express.urlencoded({extended:true}))//body
 
 app.get("/login",session.login)
 app.get("/forgetpassword",session.forgetPassword)
+app.post("/signup",session.signup)
 
 app.post("/add",calc.add)
 app.post("/sub",calc.sub)
 
 app.post("/prime",logic.prime)
+app.post("/max",logic.findMax)
+
 
 app.listen(9999,function(){
     console.log("server started...on 9999");
