@@ -1,3 +1,5 @@
+
+
 let users = []
 users.push({
 
@@ -21,23 +23,48 @@ function signup(req, resp) {
     let userId = parseInt(Math.random() * 1000000);
 
     //validation 
-    //required 
+    let isError = false;
+    let errorMsg = [];
+
+    if (firstName == undefined || firstName.trim().length == 0) {
+        isError = true;
+        errorMsg.push({
+            "firstNameError":"Please Enter FirstName"
+        }) 
+
+    }
+    if (email == undefined || email.trim().length == 0) {
+        isError = true; 
+        errorMsg.push({
+            "emailError":"Please Enter Email"
+        })
+    }
+
     //format 
     //duplicate 
 
+    if (isError == true) {
+        //error
+        resp.json({
+            "error": errorMsg,
+            "status":-1,
+            "msg":"Please Solve Error"
+        })
+    } else {
+        users.push({
+            "firstName": firstName,
+            "email": email,
+            "userId": userId,
+            "password": password
+        })//0  
 
-    users.push({
-        "firstName": firstName,
-        "email": email,
-        "userId": userId,
-        "password": password
-    })//0  
+        console.log(users);
 
-    console.log(users);
-
-    resp.json({
-        "msg": "Signup Done"
-    })
+        resp.json({
+            "msg": "Signup Done",
+            "status":200
+        })
+    }
 }
 
 //login 
