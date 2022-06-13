@@ -160,7 +160,56 @@ n1=1 n2=22 n3=44 n4=5 n5=9
 --------------------------- 
 signup --> firstName userId email password 
 
- 
+-----------------------------------
+
+Signup
+Login
+Forgetpassword
+ResetPassword
+
+
+
+-----------------------------------
+
+ database ?
+ Node - Express 
+ Mongodb --noSql  
+ Angular 
+
+table --collection 
+	columns 
+	row 
+
+student -- table 
+	sid
+	sname
+	1 	ram
+	2	sita 
+row - record 
+
+
+student - collection 
+sid 
+sname 
+
+1 ram
+2 sita
+3 ravan 25000 
+
+document -- its a collection of key values 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

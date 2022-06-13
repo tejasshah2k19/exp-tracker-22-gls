@@ -19,9 +19,12 @@ app.use(express.urlencoded({extended:true}))//body
 //     res.send('Login')
 // })
 
-app.get("/login",session.login)
-app.get("/forgetpassword",session.forgetPassword)
+app.post("/login",session.login)
+app.post("/forgetpassword",session.forgetPassword)
 app.post("/signup",session.signup)
+app.post("/reset",session.resetPassword)
+app.get("/users",session.getAllUsers)
+
 
 app.post("/add",calc.add)
 app.post("/sub",calc.sub)
