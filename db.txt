@@ -1,0 +1,56 @@
+db 
+
+show dbs
+
+use royaldb
+
+show collections
+
+db.createColletion("books")
+
+db.users.insertOne({"firstName":"MsDhoni"})
+
+db.users.find()
+
+db.users.find().pretty()
+
+
+db.users.insertMany(
+    [
+        {
+            firstName:"ravan",
+            email:"ravan@gmail.com",
+            password:"ravan123"
+        },
+        {
+            firstName:"laxman",
+            email:"laxman@gmail.com",
+            password:"laxman123"
+        }
+    ]
+)
+
+db.users.insert(
+    {
+        firstName:"bhishm",
+        email:"bhishm@gmail.com",
+        password:"bhishm123"
+    }
+)
+
+db.users.insert([
+    {
+        firstName:"bhim",
+        email:"bhim@gmail.com",
+        password:"bhim123"
+    },
+    {
+        firstName:"arjun",
+        email:"arjun@gmail.com",
+        password:"arjun123"
+    }
+])
+
+
+
+
