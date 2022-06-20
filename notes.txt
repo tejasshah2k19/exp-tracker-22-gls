@@ -199,6 +199,10 @@ sname
 document -- its a collection of key values 
 
 
+---------------------------------
+once we got db connection we want to insert into db 
+
+1) model 
 
 
 

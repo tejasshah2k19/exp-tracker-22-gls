@@ -51,3 +51,6 @@ module.exports.getAllUsers = function(req,res){
         }
     })
 }
+
+
+ 
