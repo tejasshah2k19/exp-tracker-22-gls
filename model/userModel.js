@@ -4,7 +4,6 @@
 
 const mongoose = require("mongoose");
 
-
 const Schema = mongoose.Schema;
 
 const UserSchema = new mongoose.Schema({
@@ -19,7 +18,10 @@ const UserSchema = new mongoose.Schema({
     },
     password:{
         type:String
-    } 
+    },role:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Role"
+    }
 });
  
 

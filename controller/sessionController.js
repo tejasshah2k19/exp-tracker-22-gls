@@ -5,12 +5,14 @@ module.exports.signup = function(req,res){
     let lastName = req.body.lastName; 
     let email  = req.body.email;
     let password  = req.body.password;
+    let role = req.body.role
     console.log(req.body);
     let u = {
         "firstName":firstName,
         "lastName":lastName,
         "email":email,
-        "password":password
+        "password":password,
+        "role":role
     }
 
 
@@ -35,7 +37,7 @@ module.exports.signup = function(req,res){
 
 
 module.exports.getAllUsers = function(req,res){
-    UserModel.find(function(err,data){
+    UserModel.find().populate("role").exec(function(err,data){
         if(err){
             res.json({
                 status:-1,

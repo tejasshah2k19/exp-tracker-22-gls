@@ -3,6 +3,7 @@ const session = require("./controller/session")
 const calc = require("./controller/calc")
 const logic = require("./controller/logic")
 const sessionController  = require("./controller/sessionController")
+const roleController = require("./controller/roleController")
 
 const mongoose = require("mongoose");
 
@@ -57,6 +58,11 @@ app.post("/max", logic.findMax)
 app.post("/register",sessionController.signup)
 app.get("/getallusers",sessionController.getAllUsers)
 
+//role 
+app.post("/role",roleController.addRole)
+app.delete("/role",roleController.deleteRole)
+app.put("/role",roleController.updateRole)
+app.get("/role",roleController.getAllRoles)
 
 app.listen(9999, function () {
     console.log("server started...on 9999");
