@@ -1,11 +1,11 @@
-const express = require("express")
-const session = require("./controller/session")
+const express = require("express") 
 const calc = require("./controller/calc")
 const logic = require("./controller/logic")
 const sessionController  = require("./controller/sessionController")
 const roleController = require("./controller/roleController")
 
 const mongoose = require("mongoose");
+const cors = require("cors")
 
 
 
@@ -13,6 +13,7 @@ const app = express()
 //middle wares 
 app.use(express.json())//body
 app.use(express.urlencoded({ extended: true }))//body
+app.use(cors())
 //image pdf audio video ---> file 
 
 
@@ -40,23 +41,20 @@ mongoose.connect("mongodb://localhost/royaldb", function (err) {
 //     res.send('Login')
 // })
 
-app.post("/login", session.login)
-app.post("/forgetpassword", session.forgetPassword)
-app.post("/signup", session.signup)
-app.post("/reset", session.resetPassword)
-app.get("/users", session.getAllUsers)
+// app.post("/login", session.login)
+// app.post("/forgetpassword", session.forgetPassword)
+// app.post("/signup", session.signup)
+// app.post("/reset", session.resetPassword)
+// app.get("/users", session.getAllUsers)
 
 
-app.post("/add", calc.add)
-app.post("/sub", calc.sub)
 
-app.post("/prime", logic.prime)
-app.post("/max", logic.findMax)
 
 //api-db 
 
 app.post("/register",sessionController.signup)
 app.get("/getallusers",sessionController.getAllUsers)
+app.post("/login",sessionController.login)
 
 //role 
 app.post("/role",roleController.addRole)
