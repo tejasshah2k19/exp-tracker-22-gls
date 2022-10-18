@@ -55,6 +55,7 @@ mongoose.connect("mongodb://localhost/royaldb", function (err) {
 app.post("/register",sessionController.signup)
 app.get("/getallusers",sessionController.getAllUsers)
 app.post("/login",sessionController.login)
+app.post("/forgetpassword",sessionController.forgetPassword)
 
 //role 
 app.post("/role",roleController.addRole)
