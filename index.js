@@ -56,6 +56,8 @@ app.post("/register",sessionController.signup)
 app.get("/getallusers",sessionController.getAllUsers)
 app.post("/login",sessionController.login)
 app.post("/forgetpassword",sessionController.forgetPassword)
+app.put("/resetpassword",sessionController.resetPassword)
+
 
 //role 
 app.post("/role",roleController.addRole)
