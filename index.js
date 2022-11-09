@@ -3,6 +3,8 @@ const calc = require("./controller/calc")
 const logic = require("./controller/logic")
 const sessionController  = require("./controller/sessionController")
 const roleController = require("./controller/roleController")
+const userController = require("./controller/userController")
+
 
 const mongoose = require("mongoose");
 const cors = require("cors")
@@ -64,6 +66,10 @@ app.post("/role",roleController.addRole)
 app.delete("/role",roleController.deleteRole)
 app.put("/role",roleController.updateRole)
 app.get("/role",roleController.getAllRoles)
+
+
+//users - admin 
+app.delete("/deleteuser/:userId",userController.deleteUser)
 
 app.listen(9999, function () {
     console.log("server started...on 9999");
