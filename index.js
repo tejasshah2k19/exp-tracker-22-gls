@@ -70,6 +70,9 @@ app.get("/role",roleController.getAllRoles)
 
 //users - admin 
 app.delete("/deleteuser/:userId",userController.deleteUser)
+app.get("/getuserbyid/:userId",userController.getUserById)
+app.put("/updateuser",userController.updateUser)
+
 
 app.listen(9999, function () {
     console.log("server started...on 9999");
