@@ -4,6 +4,7 @@ const logic = require("./controller/logic")
 const sessionController  = require("./controller/sessionController")
 const roleController = require("./controller/roleController")
 const userController = require("./controller/userController")
+const expenseController = require("./controller/expenseController")
 
 
 const mongoose = require("mongoose");
@@ -73,6 +74,11 @@ app.delete("/deleteuser/:userId",userController.deleteUser)
 app.get("/getuserbyid/:userId",userController.getUserById)
 app.put("/updateuser",userController.updateUser)
 
+
+//expenses
+app.get("/getthismonthexpense",expenseController.getThisMonthExpenses)
+app.post("/addexpense",expenseController.addExp)
+app.get("/getallexpenses",expenseController.getAllExp)
 
 app.listen(9999, function () {
     console.log("server started...on 9999");
