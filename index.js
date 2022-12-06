@@ -79,6 +79,7 @@ app.put("/updateuser",userController.updateUser)
 app.get("/getthismonthexpense",expenseController.getThisMonthExpenses)
 app.post("/addexpense",expenseController.addExp)
 app.get("/getallexpenses",expenseController.getAllExp)
+app.get("/getcurrentyearexpense",expenseController.getCurrentYearExpenses)
 
 app.listen(9999, function () {
     console.log("server started...on 9999");
