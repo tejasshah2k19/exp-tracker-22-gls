@@ -1,11 +1,11 @@
-const express = require("express") 
+const express = require("express")
 const calc = require("./controller/calc")
 const logic = require("./controller/logic")
-const sessionController  = require("./controller/sessionController")
+const sessionController = require("./controller/sessionController")
 const roleController = require("./controller/roleController")
 const userController = require("./controller/userController")
 const expenseController = require("./controller/expenseController")
-
+const categoryController = require("./controller/categoryController")
 
 const mongoose = require("mongoose");
 const cors = require("cors")
@@ -55,31 +55,39 @@ mongoose.connect("mongodb://localhost/royaldb", function (err) {
 
 //api-db 
 
-app.post("/register",sessionController.signup)
-app.get("/getallusers",sessionController.getAllUsers)
-app.post("/login",sessionController.login)
-app.post("/forgetpassword",sessionController.forgetPassword)
-app.put("/resetpassword",sessionController.resetPassword)
+app.post("/register", sessionController.signup)
+app.get("/getallusers", sessionController.getAllUsers)
+app.post("/login", sessionController.login)
+app.post("/forgetpassword", sessionController.forgetPassword)
+app.put("/resetpassword", sessionController.resetPassword)
 
 
 //role 
-app.post("/role",roleController.addRole)
-app.delete("/role",roleController.deleteRole)
-app.put("/role",roleController.updateRole)
-app.get("/role",roleController.getAllRoles)
+app.post("/role", roleController.addRole)
+app.delete("/role", roleController.deleteRole)
+app.put("/role", roleController.updateRole)
+app.get("/role", roleController.getAllRoles)
 
 
 //users - admin 
-app.delete("/deleteuser/:userId",userController.deleteUser)
-app.get("/getuserbyid/:userId",userController.getUserById)
-app.put("/updateuser",userController.updateUser)
+app.delete("/deleteuser/:userId", userController.deleteUser)
+app.get("/getuserbyid/:userId", userController.getUserById)
+app.put("/updateuser", userController.updateUser)
 
 
 //expenses
-app.get("/getthismonthexpense",expenseController.getThisMonthExpenses)
-app.post("/addexpense",expenseController.addExp)
-app.get("/getallexpenses",expenseController.getAllExp)
-app.get("/getcurrentyearexpense",expenseController.getCurrentYearExpenses)
+app.get("/getthismonthexpense", expenseController.getThisMonthExpenses)
+app.post("/addexpense", expenseController.addExp)
+app.get("/getallexpenses", expenseController.getAllExp)
+app.get("/getcurrentyearexpense", expenseController.getCurrentYearExpenses)
+
+
+//category 
+app.post("/category", categoryController.addCategory)
+app.delete("/category", categoryController.deletecategory)
+app.put("/category", categoryController.updatecategory)
+app.get("/category", categoryController.getAllCategories)
+
 
 app.listen(9999, function () {
     console.log("server started...on 9999");
